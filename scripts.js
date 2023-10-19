@@ -3,8 +3,13 @@
 let playerScore = 0
 let computerScore = 0
 let gameResult = ""
-const playerSelection = prompt("Rock Paper Scissors","SCisSoRS").toLowerCase();
-const computerSelection = getComputerChoice();
+let playerSelection = prompt("Rock Paper Scissors","SCisSoRS").toLowerCase();
+let computerSelection = getComputerChoice();
+
+function getPlayerChoice(){
+    
+}
+
 
 function getComputerChoice() {
     let choices = ["rock", "paper", "scissors"]
@@ -44,19 +49,29 @@ function playRound(playerSelection, computerSelection) {
     return log
 }
 
+function isGameOver(){
+    let overMsg = "Game is Over!"
+    return overMsg
+}
+
 
 
 function game(){
+    if (
+        (playerScore != 5) ||
+        (computerScore !=5)
+    ) {
+        playRound(playerSelection, computerSelection);
+    }
 
-    console.log(playRound(playerSelection, computerSelection));
-    console.log(playRound(playerSelection, computerSelection));
-    console.log(playRound(playerSelection, computerSelection));
-    console.log(playRound(playerSelection, computerSelection));
-    console.log(playRound(playerSelection, computerSelection));
-    console.log(playRound(playerSelection, computerSelection));
+    else if (
+        (playerScore === 5) ||
+        (computerScore ===5)
+    ){
+        isGameOver()
+    }
+
    
-
-
 }
    
 
