@@ -1,14 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="scripts.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock Paper Scissors</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pixelify+Sans">
 </head>
 <body>
-    
-    
+  <header class="header">
+    <h1 class="title">Rock Paper Scissors</h1>
+  </header>
+  <main class="main">
+    <div class="scoreboard">
+      <h2 class="result-text" id="resultText">
+        Press a Button to Start
+      </h2>
+      <h3 class="result-msg" id="resultMsg">
+        First to 5 points Wins!
+      </h3>
+      <div class="scores-container">
+        <div class="score-box">
+          <div class="sign" id="playerSign">👤</div>
+          <p class="score" id="playerScore">Player: 0</p>
+        </div>
+        <div class="score-box">
+          <div class="sign" id="computerSign">🤖</div>
+          <p class="score" id="computerScore">Computer: 0</p>
+        </div>
+      </div>
+    </div>
+    <div class="buttons">
+      <button class="btn btn-square" id="rockBtn">
+        <div class="sign">✊</div>
+      </button>
+      <button class="btn btn-square" id="paperBtn">
+        <div class="sign">✋</div>
+      </button>
+      <button class="btn btn-square" id="scissorsBtn">
+        <div class="sign">✌</div>
+      </button>
+    </div>
+  </main>
+  <footer class="footer">
+    <p>
+      Copyright ©
+      <script>
+        document.write(new Date().getFullYear())
+      </script>
+      Imbod
+      <a href="https://github.com/MarkShemberg" target="_blank">
+        <i class="fa fa-github" style="color: green;"></i>
+      </a>
+    </p>
+  </footer>
+  <dialog class="modal" id="endgameModal">
+    <p class="modal-title" id="endgameMsg"></p>
+    <button class="btn btn-restart" id="restartBtn">Play Again</button>
+  </dialog>
+  <div class="overlay" id="overlay"></div>
+  <script src="scripts.js"></script>
+</head>
 </body>
 </html>
