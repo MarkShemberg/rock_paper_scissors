@@ -1,5 +1,7 @@
 # Rock_Paper_Scissors 
 
+[Live Demo](https://markshemberg.github.io/rock_paper_scissors/)
+
 First Stage | Using Javascript to make the game
 
 • Created functions to randomize computer choice and a prompt to take player input.\
